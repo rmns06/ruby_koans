@@ -15,6 +15,24 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+  count = isEqual(a,b)
+  count += isEqual(a,c)
+  count += isEqual(b,c)
+  case count
+  when 3
+    :equilateral
+  when 1
+    :isosceles
+  else
+    :scalene
+  end
+end
+
+def isEqual(a, b)
+  if a == b
+    return 1
+  end
+  return 0
 end
 
 # Error class used in part 2.  No need to change this code.
